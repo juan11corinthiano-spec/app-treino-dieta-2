@@ -61,16 +61,16 @@ export default function OnboardingPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50 dark:from-gray-900 dark:via-purple-900 dark:to-gray-900 flex items-center justify-center p-4">
       <Card className="w-full max-w-2xl shadow-2xl">
         <CardHeader className="text-center">
           <div className="flex justify-center mb-4">
-            <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-4 rounded-full">
+            <div className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 p-4 rounded-full">
               <Dumbbell className="w-12 h-12 text-white" />
             </div>
           </div>
-          <CardTitle className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Bem-vindo ao FitLife
+          <CardTitle className="text-3xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 bg-clip-text text-transparent">
+            Bem-vindo ao GymFlow
           </CardTitle>
           <CardDescription className="text-base mt-2">
             Vamos personalizar seu treino e dieta em {step}/3 passos
@@ -133,7 +133,7 @@ export default function OnboardingPage() {
               <Button
                 onClick={() => setStep(2)}
                 disabled={!formData.name || !formData.age || !formData.weight || !formData.height}
-                className="w-full h-12 text-base bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700"
+                className="w-full h-12 text-base bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 hover:from-purple-600 hover:via-pink-600 hover:to-orange-600"
               >
                 Próximo
               </Button>
@@ -151,8 +151,8 @@ export default function OnboardingPage() {
                     onClick={() => setFormData({ ...formData, experienceLevel: level.value as ExperienceLevel })}
                     className={`p-4 rounded-lg border-2 text-left transition-all hover:scale-105 ${
                       formData.experienceLevel === level.value
-                        ? 'border-blue-500 bg-blue-50 dark:bg-blue-950'
-                        : 'border-gray-200 hover:border-blue-300'
+                        ? 'border-purple-500 bg-purple-50 dark:bg-purple-950'
+                        : 'border-gray-200 hover:border-purple-300'
                     }`}
                   >
                     <div className="font-semibold text-base">{level.label}</div>
@@ -172,7 +172,7 @@ export default function OnboardingPage() {
                 <Button
                   onClick={() => setStep(3)}
                   disabled={!formData.experienceLevel}
-                  className="flex-1 h-12 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700"
+                  className="flex-1 h-12 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 hover:from-purple-600 hover:via-pink-600 hover:to-orange-600"
                 >
                   Próximo
                 </Button>
@@ -193,11 +193,11 @@ export default function OnboardingPage() {
                       onClick={() => setFormData({ ...formData, goal: goal.value as Goal })}
                       className={`p-4 rounded-lg border-2 text-center transition-all hover:scale-105 ${
                         formData.goal === goal.value
-                          ? 'border-purple-500 bg-purple-50 dark:bg-purple-950'
-                          : 'border-gray-200 hover:border-purple-300'
+                          ? 'border-pink-500 bg-pink-50 dark:bg-pink-950'
+                          : 'border-gray-200 hover:border-pink-300'
                       }`}
                     >
-                      <Icon className="w-8 h-8 mx-auto mb-2 text-purple-600" />
+                      <Icon className="w-8 h-8 mx-auto mb-2 text-pink-600" />
                       <div className="font-semibold text-base">{goal.label}</div>
                       <div className="text-sm text-muted-foreground mt-1">{goal.desc}</div>
                     </button>
@@ -216,7 +216,7 @@ export default function OnboardingPage() {
                 <Button
                   onClick={handleSubmit}
                   disabled={!formData.goal}
-                  className="flex-1 h-12 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700"
+                  className="flex-1 h-12 bg-gradient-to-r from-pink-500 via-orange-500 to-purple-600 hover:from-pink-600 hover:via-orange-600 hover:to-purple-700"
                 >
                   Começar
                 </Button>
@@ -230,7 +230,7 @@ export default function OnboardingPage() {
               <div
                 key={i}
                 className={`h-2 w-16 rounded-full transition-all ${
-                  i <= step ? 'bg-gradient-to-r from-blue-500 to-purple-600' : 'bg-gray-200'
+                  i <= step ? 'bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500' : 'bg-gray-200'
                 }`}
               />
             ))}

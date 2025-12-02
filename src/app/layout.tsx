@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Criado com a Lasy",
-  description: "Projeto criado com Lasy AI",
+  title: "GymFlow - Seu Treino e Dieta Personalizados",
+  description: "Plataforma completa de treino e dieta adaptada ao seu nível e objetivos",
 };
 
 export default function RootLayout({
